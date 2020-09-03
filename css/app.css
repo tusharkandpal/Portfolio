@@ -1,12 +1,15 @@
 /* Class Utilities */
 .primary{
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 .secondary{
-    font-size: 0.9rem;
+    font-size: 1.2rem;
 }
 
 /* Home Section */
+#menu ul .primary{
+    font-size: 1rem;
+}
 #logo{
     width: 80px;
     transition: all 1s ease;
@@ -26,7 +29,7 @@
 }
 .carousel,
 .carousel-item img{
-    width: 250px;
+    width: 300px;
     height: auto;
   }
 .carousel a{
@@ -44,20 +47,20 @@
 
 /* Tools & Technologies */
 #tools img{
-    width: 75px;
-    height: 75px;
+    width: 95px;
+    height: 95px;
     margin: 10px;
     transition: all 1s;
 }
 #tools img:hover{
-    width: 85px;
-    height: 85px;
+    width: 100px;
+    height: 100px;
     transition: all 1s;
 }
 
 /* Resume Section */
 #resume>div{
-    width: 300px;
+    width: 320px;
 }
 
 /* Footer Section */
@@ -72,7 +75,7 @@ footer #social a{
     
 }
 footer #copyright{
-    margin-top: 15px;
+    margin-top: 20px;
  }
 
 

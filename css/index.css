@@ -6,7 +6,6 @@
     padding: 0px;
     box-sizing: border-box;
     scroll-behavior: smooth;
-
 }
 html,body{
     overflow-x: hidden !important;
@@ -17,13 +16,13 @@ html,body{
     font-family: 'Parisienne', cursive;
     color: rgb(179 190 211);
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 2rem;
     padding: 10px;
     margin: 10px;
 }
 .secondary{
     font-family: 'Seaweed Script', cursive;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     text-align: center;
     padding: 10px;
 }
@@ -100,7 +99,7 @@ canvas{
 }
 #home #name:hover{
     transition: all 0.5s ease;
-    font-size: 2rem;
+    font-size: 2.2rem;
 }
 #heading{
     animation: dance 1s ease-in-out 0.5s;
@@ -204,6 +203,7 @@ canvas{
 /* Tools & Technologies */
 #tools{
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
