@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Seaweed+Script&display=swap');
+
+/* CSS Reset */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+html,body{
+    overflow-x: hidden !important;
+}
+
+/* Class & Element Utilities */
+.primary{
+    font-family: 'Parisienne', cursive;
+    color: rgb(179 190 211);
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 10px;
+    margin: 10px;
+}
+.secondary{
+    font-family: 'Seaweed Script', cursive;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Home Page */
+canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#home{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    background-attachment: fixed;
+    background-color: #000000;
+}
+
+/* Menu */
+.sticky {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    z-index: 50;
+}
+#menu ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 2px rgb(8, 8, 65);
+    margin: 0;
+}
+#menu li{
+    list-style: none;
+    padding: 15px 0px;
+    z-index: 1;
+}
+#menu .item{
+    text-decoration: none;
+}
+.item:hover{
+    color: white;
+}
+
+/* Home Page > Intro */
+#home #intro{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+#logo{
+    width: 150px;
+    height: auto;
+    align-self: center;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    z-index: 1;
+    background: #080841;
+    box-shadow:  -5px -5px 0px #040424, 
+                 5px 5px 0px #0c0c5e;
+}
+#logo:hover{
+    transition: all 0.5s ease;
+    width: 170px;
+}
+#home #intro #name{
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+#home #name:hover{
+    transition: all 0.5s ease;
+    font-size: 2rem;
+}
+#heading{
+    animation: dance 1s ease-in-out 0.5s;
+}
+@keyframes dance{
+    from {transform: translateX(-250px);}
+    to {transform: translateX(0px); }
+}
+#info{
+    animation: hip-hop 1s ease-in-out 0.5s;
+}
+@keyframes hip-hop{
+    from {transform: translateX(250px);}
+    to {transform: translateX(0px); }
+}
+
+/* Projects Section */
+#projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 10px 10px 10px;
+    background: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 200 200'%3E%3Cpolygon fill='%23DCEFFA' points='100 0 0 100 100 100 100 200 200 100 200 0'/%3E%3C/svg%3E");
+}
+#projects #project-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#projects .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    width: 450px;
+    margin: 15px;
+    padding: 8px;
+    border-radius: 50px;
+    background: linear-gradient(-45deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.25));
+    box-shadow: 
+    -8px -8px 25px 0 rgba(0, 0, 0, 0.3),
+    12px 12px 25px 0 rgba(255, 255, 255, 0.3);
+}
+#projects>h1{
+    background-color: rgb(8, 8, 65);
+    border-radius: 20px;
+}
+#projects div>h1{
+    text-decoration: underline;
+    color: rgb(8, 8, 65);
+}
+#projects .box a{
+    text-decoration: none;
+    border-radius: 30px;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    background: linear-gradient(-45deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.25));
+    box-shadow: 
+    -8px -8px 25px 0 rgba(0, 0, 0, 0.3),
+    12px 12px 25px 0 rgba(255, 255, 255, 0.3);
+
+}
+#projects .box a:hover{
+    text-decoration: underline;
+}
+
+.carousel{
+    height: auto;
+    width: 900px;
+    margin: 1.5rem;
+}
+.carousel a{
+    width: 50px;
+}
+.carousel-control-prev {
+    background-color: black;
+    margin-left: -50px;
+}
+.carousel-control-next {
+    background-color: black;
+    margin-right: -50px;
+}
+.carousel h5{
+    display: inline-block;
+    margin-top: 500px;
+    background: #1d1b1b;
+    color: white;
+}
+@media screen and (max-width: 1200px){
+    .carousel{
+      height: auto;
+      width: 500px;
+    }
+}
+
+/* Tools & Technologies */
+#tools{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#tools img{
+    background: linear-gradient(-45deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.25));
+    box-shadow: 
+    -8px -8px 25px 0 rgba(0, 0, 0, 0.3),
+    12px 12px 25px 0 rgba(255, 255, 255, 0.3);
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    transition: all 0.5s;
+    border-radius: 20px;
+}
+#tools img:hover{
+    width: 230px;
+    height: 230px;
+    transition: all 0.5s;
+}
+
+/* Resume Section */
+#resume{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 10px 10px 10px;
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 200 200'%3E%3Cpolygon fill='%23DCEFFA' points='100 0 0 100 100 100 100 200 200 100 200 0'/%3E%3C/svg%3E");
+}
+#resume>h1{
+    margin: 10px;
+    border-radius: 20px;
+    background-color: rgb(8, 8, 65);
+}
+#resume>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    width: 650px;
+}
+#resume a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 50px;
+    background: #1d1b1b;
+    box-shadow:  -2px -2px 3px #100f0f, 
+                2px 2px 3px #2a2727;
+}
+#resume a:hover{
+    text-decoration: underline;
+}
+
+/* Footer Section */
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30vh;
+    background: black;
+    color: white;
+}
+footer .secondary{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+}
+#details{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+#contact{
+    text-align: left;
+}
+footer #details a{
+    color: white;
+}
+footer #details a:hover{
+    text-decoration: underline;
+}
+#social{
+    display: flex;
+    flex-wrap: wrap;
+}
+#social a{
+    margin: 0 8px;
+}
+svg{
+    display: inline;
+    vertical-align: bottom;
+}
+footer #copyright{
+   margin-top: 50px;
+}
+

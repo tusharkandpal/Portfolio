@@ -1,0 +1,77 @@
+
+.primary{
+    font-size: 1rem;
+}
+.secondary{
+    font-size: 0.9rem;
+}
+#logo{
+    width: 80px;
+    transition: all 1s ease;
+}
+#logo:hover{
+    transition: all 1s ease;
+    width: 100px;
+}
+
+#home #name:hover{
+    font-size: 1.2rem;
+}
+
+/* Projects Section */
+#projects .box{
+   width: 300px;
+   margin: 15px 5px;
+}
+.carousel,
+.carousel-item img{
+    width: 250px;
+    height: auto;
+  }
+.carousel a{
+    width: 30px;
+  }
+.carousel-control-prev {
+    background-color: black;
+    margin-left: -30px;
+    
+}
+.carousel-control-next {
+    background-color: black;
+    margin-right: -30px;
+}
+
+/* Tools & Technologies */
+#tools img{
+    width: 75px;
+    height: 75px;
+    margin: 10px;
+    transition: all 1s;
+}
+#tools img:hover{
+    width: 85px;
+    height: 85px;
+    transition: all 1s;
+}
+/* Resume Section */
+#resume>div{
+    width: 300px;
+}
+
+
+/* Footer Section */
+footer .secondary{
+    font-size: 0.8rem;
+}
+#social svg{
+    width: 30px;
+}
+footer #social a{
+    margin: 0 5px;
+    
+}
+footer #copyright{
+    margin-top: 15px;
+ }
+
+
