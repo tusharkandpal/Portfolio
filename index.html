@@ -22,8 +22,15 @@
             </ul>
         </div>
         <div id="intro">
+
             <img id="logo" src="img/profile.jpg" alt="profile-pic">
-            <span id="name" class="primary">Tushar Kandpal</span>
+            <div class="primary">
+                <div id="typed-strings">
+                    <p id="name">Tushar Kandpal</p>
+                </div>
+                <span id="typed"></span>
+            </div>
+
             <p class="primary">I'm a fresher looking for opportunities in Software Engineer & Front-end Developer
                 role.</p>
             <p id="heading" class="primary">Welcome to Portfolio - Tushar</p>
@@ -95,12 +102,18 @@
         </div>
         <h1 class="primary">Tools & Technologies</h1>
         <div id="tools">
-            <img src="img/html.png" alt="HTML" class="img-thumbnail" data-toggle="tooltip" data-placement="top" title="HTML" >
-            <img src="/img/css.png" alt="CSS" class="img-thumbnail" data-toggle="tooltip" data-placement="bottom" title="CSS" >
-            <img src="/img/js.png" alt="JavaScript"  class="img-thumbnail" data-toggle="tooltip" data-placement="top" title="JavaScript" >
-            <img src="/img/bootstrap.png" alt="Bootstrap"  class="img-thumbnail" data-toggle="tooltip" data-placement="bottom" title="Bootstrap" >
-            <img src="/img/git.png" alt="Git" class="img-thumbnail" data-toggle="tooltip" data-placement="top" title="Git" >
-            <img src="/img/reactjs.png" alt="ReactJS" class="img-thumbnail" data-toggle="tooltip" data-placement="bottom" title="ReactJS" >
+            <img src="img/html.png" alt="HTML" class="img-thumbnail" data-toggle="tooltip" data-placement="top"
+                title="HTML">
+            <img src="/img/css.png" alt="CSS" class="img-thumbnail" data-toggle="tooltip" data-placement="bottom"
+                title="CSS">
+            <img src="/img/js.png" alt="JavaScript" class="img-thumbnail" data-toggle="tooltip" data-placement="top"
+                title="JavaScript">
+            <img src="/img/bootstrap.png" alt="Bootstrap" class="img-thumbnail" data-toggle="tooltip"
+                data-placement="bottom" title="Bootstrap">
+            <img src="/img/git.png" alt="Git" class="img-thumbnail" data-toggle="tooltip" data-placement="top"
+                title="Git">
+            <img src="/img/reactjs.png" alt="ReactJS" class="img-thumbnail" data-toggle="tooltip"
+                data-placement="bottom" title="ReactJS">
         </div>
     </section>
     <section id="resume">
@@ -126,8 +139,10 @@
         <a class="secondary" href="img/Tushar Kandpal Resume.pdf" target="blank">View Resume</a>
         <!-- https://drive.google.com/file/d/1FBQJLjpMZwB15CTm_pKemRKPboxrmEWu/view -->
         <span id="quote">
-        <h1 class="secondary">Quote: "There's a room at the top they're telling you still, but first you must learn how to
-            smile as you kill." - John Winston Lennon</h1></span>
+            <h1 class="secondary">Quote: "There's a room at the top they're telling you still, but first you must learn
+                how to
+                smile as you kill." - John Winston Lennon</h1>
+        </span>
 
     </section>
     <footer>
@@ -240,11 +255,20 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
-        <script>
-            $(function () {
-          $('[data-toggle="tooltip"]').tooltip()
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
         })
-        </script>
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script>
+        var typed = new Typed('#typed', {
+            stringsElement: '#typed-strings',
+            typeSpeed: 50,
+            shuffle: true,
+        });
+    </script>
 
 </body>
 

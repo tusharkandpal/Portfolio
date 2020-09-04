@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Seaweed+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Roboto:wght@500&display=swap');
 
 /* CSS Reset */
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
@@ -13,16 +13,16 @@ html,body{
 
 /* Class & Element Utilities */
 .primary{
-    font-family: 'Parisienne', cursive;
+    font-family: 'Roboto', sans-serif;
     color: rgb(179 190 211);
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 10px;
     margin: 10px;
 }
 .secondary{
-    font-family: 'Seaweed Script', cursive;
-    font-size: 1.8rem;
+    font-family:  'Goudy Bookletter 1911', serif;
+    font-size: 1.3rem;
     text-align: center;
     padding: 10px;
 }
@@ -61,7 +61,7 @@ canvas{
 }
 #menu li{
     list-style: none;
-    padding: 15px 0px;
+    padding: 5px 0px;
     z-index: 1;
 }
 #menu .item{
@@ -76,6 +76,7 @@ canvas{
     display:flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     height: 100vh;
 }
 #logo{
@@ -93,14 +94,7 @@ canvas{
     transition: all 0.5s ease;
     width: 170px;
 }
-#home #intro #name{
-    transition: all 0.5s ease;
-    z-index: 1;
-}
-#home #name:hover{
-    transition: all 0.5s ease;
-    font-size: 2.2rem;
-}
+
 #heading{
     animation: dance 1s ease-in-out 0.5s;
 }

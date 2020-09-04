@@ -18,9 +18,6 @@
     transition: all 1s ease;
     width: 100px;
 }
-#home #name:hover{
-    font-size: 1.2rem;
-}
 
 /* Projects Section */
 #projects .box{
