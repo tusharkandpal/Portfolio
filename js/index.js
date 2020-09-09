@@ -18,3 +18,14 @@
     }
   }
 
+  // Animations
+
+  $(document).ready(function(){
+    $(window).scroll(function(){
+        let oTop=$("#heading").offset().top-window.innerHeight;
+        if($(window).scrollTop()>oTop){
+            $('#heading').addClass('animate__animated animate__zoomIn');
+        }
+    });
+});
+

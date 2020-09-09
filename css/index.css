@@ -94,20 +94,73 @@ canvas{
     transition: all 0.5s ease;
     width: 170px;
 }
+/* Scrolling List */
+.content_container{
+    font-weight: bold;
+    overflow: hidden;
+    height: 2.5rem;
+    display: flex;
+    align-items: baseline;
+    text-align: center;
+}
+.content_container::before{
+    content: "[";
+    padding-right: 1rem;
+}
+.content_container::after{
+    content: "]";
+    padding-left: 1rem;
+}
 
-#heading{
-    animation: dance 1s ease-in-out 0.5s;
+.container_list{
+    list-style: none;
+    margin: 0;
+    animation-name: change-item;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
 }
-@keyframes dance{
-    from {transform: translateX(-250px);}
-    to {transform: translateX(0px); }
+.container_item{
+    margin: 0px 10px;
+    line-height: 40px;
 }
-#info{
-    animation: hip-hop 1s ease-in-out 0.5s;
-}
-@keyframes hip-hop{
-    from {transform: translateX(250px);}
-    to {transform: translateX(0px); }
+
+@keyframes change-item{
+    0%{
+        transform: translateZ(0);
+    }
+    
+    12.5%{
+        transform: translate3d(0,-40px,0);
+    }
+ 
+    25% {
+        transform: translate3d(0,-80px,0);
+    }
+   
+    37.5% {
+        transform: translate3d(0,-120px,0);
+    }
+  
+    50% {
+        transform: translate3d(0,-160px,0);
+    }
+    
+    62.5%{
+        transform: translate3d(0,-120px,0);
+    }
+ 
+    75% {
+        transform: translate3d(0,-80px,0);
+    }
+  
+    87.5% {
+        transform: translate3d(0,-40px,0);
+    }
+   
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+   
 }
 
 /* Projects Section */
@@ -247,8 +300,6 @@ canvas{
     margin: 15px;
     border-radius: 50px;
     background: #1d1b1b;
-    box-shadow:  -2px -2px 3px #100f0f, 
-                2px 2px 3px #2a2727;
 }
 #about a:hover{
     text-decoration: underline;
@@ -259,7 +310,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 30vh;
+    height: 35vh;
     background: black;
     color: white;
 }
@@ -288,7 +339,11 @@ svg{
     display: inline;
     vertical-align: bottom;
 }
+#moveTop{
+    color: white;
+    float: right;
+}
 footer #copyright{
-   margin-top: 50px;
+   margin-top: 80px;
 }
 
