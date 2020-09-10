@@ -62,7 +62,7 @@
 
 /* Footer Section */
 footer{
-    height: 40vh;
+    height: 41vh;
 }
 footer .secondary{
     font-size: 0.8rem;
@@ -70,9 +70,3 @@ footer .secondary{
 #social svg{
     width: 30px;
 }
-footer #social a{
-    margin: 0 5px;
-}
-
-
-

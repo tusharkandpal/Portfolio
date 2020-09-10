@@ -16,7 +16,7 @@ particlesJS('home',
   {
     "particles": {
       "number": {
-        "value": 250,
+        "value": 150,
         "density": {
           "enable": true,
           "value_area": 800
@@ -26,13 +26,13 @@ particlesJS('home',
         "value": "#ffffff"
       },
       "shape": {
-        "type": "star",
+        "type": "circle",
         "stroke": {
           "width": 1,
           "color": "#000000"
         },
         "polygon": {
-          "nb_sides": 5
+          "nb_sides": 2
         },
         "image": {
           "src": "img/github.svg",
