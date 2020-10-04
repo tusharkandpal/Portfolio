@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Roboto:wght@500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@1,600&display=swap');
 /* CSS Reset */
 *{
     margin: 0;
@@ -13,15 +13,13 @@ html,body{
 
 /* Class & Element Utilities */
 .primary{
-    font-family: 'Roboto', sans-serif;
-    color: rgb(179 190 211);
-    text-align: center;
+    font-family: 'Alegreya', serif;
+    color: rgb(27, 33, 66);
     font-size: 1.5rem;
-    padding: 10px;
     margin: 10px;
 }
 .secondary{
-    font-family: 'Goudy Bookletter 1911', serif;
+    font-family: 'Vollkorn', serif;
     font-size: 1.3rem;
     text-align: center;
     padding: 10px;
@@ -32,15 +30,14 @@ canvas{
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 0;
 }
 #home{
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100vh;
-    padding: 2px 10px 10px 10px;
-    background: url('/img/pexels-lukasfilipp-922807.jpg') center/cover;
-    background-attachment: fixed;
+    position: relative;
 }
 
 /* Menu */
@@ -48,15 +45,18 @@ canvas{
     position: fixed;
     top: 0px;
     left: 0;
-    width: 100%;
-    background: #0a0524a1;
     z-index: 50;
+    width: 100%;
+}
+#menu{
+    margin: 5px 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
 }
 #menu ul{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0 2px rgb(8, 8, 65);
     margin: 0;
 }
 #menu li{
@@ -66,35 +66,73 @@ canvas{
 }
 #menu a{
     text-decoration: none;
+    border-radius: 8px;
+    color: white;
     margin: 0px;
 }
 #menu a:hover{
-    color: white;
+    color: rgb(32, 25, 240);
 }
 
 /* Home Page > Intro */
 #home #intro{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
+    display: flex;
     align-items: center;
     height: 100vh;
+    padding: 0 50px;
+    position: relative;
+}
+#home::after {
+    content: "";
+    background: url('/img/back.jpg') no-repeat center/cover;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;   
+  }
+#intro p{
+    text-align: left;
+    padding: 0;
+}
+.typed-cursor{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: rgb(32, 25, 240);
+}
+#name{
+    font-size: 4.5rem;
+    display: flex;
+}
+#msg{
+    position: relative;
+    z-index: 1;
 }
 #logo{
-    width: 150px;
+    width: 200px;
     height: auto;
-    align-self: center;
+    margin: 0 30px;
     border-radius: 50%;
-    transition: all 0.5s ease;
-    z-index: 1;
-    background: #080841;
-    box-shadow:  -5px -5px 0px #040424, 
-                 5px 5px 0px #0c0c5e;
 }
-#logo:hover{
-    transition: all 0.5s ease;
-    width: 170px;
+@media screen and (max-width: 1050px){
+    #home #intro{
+        padding: 0 10px;
+    }
+    #name{
+        font-size: 2.5rem;
+    }
 }
+#hi{
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    transform: rotateZ(-5deg);
+    opacity: 0;
+}
+
 /* Scrolling List */
 .content_container{
     font-weight: bold;
@@ -125,7 +163,7 @@ canvas{
 .container_item{
     margin-left: 1rem;
     line-height: 40px;
-    color: lightskyblue;
+    color: rgb(32, 25, 240);
 }
 
 @keyframes change-item{
@@ -167,89 +205,126 @@ canvas{
    
 }
 
-/* Projects Section */
-#projects{
+/* Work Section */
+#work{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 70px 10px 10px 10px;
-    background: #ffffff;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 200 200'%3E%3Cpolygon fill='%23DCEFFA' points='100 0 0 100 100 100 100 200 200 100 200 0'/%3E%3C/svg%3E");
-}
-#projects #project-list{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-#projects .box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #ffffff;
-    width: 450px;
-    margin: 15px;
-    padding: 8px;
-    border-radius: 50px;
-    background: linear-gradient(-45deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.25));
-    box-shadow: 
-    -8px -8px 25px 0 rgba(0, 0, 0, 0.3),
-    12px 12px 25px 0 rgba(255, 255, 255, 0.3);
-}
-#projects>h1{
-    background-color: rgb(8, 8, 65);
-    border-radius: 20px;
-}
-#projects div>h1{
-    text-decoration: underline;
-    color: rgb(8, 8, 65);
-}
-#projects .box a{
-    text-decoration: none;
-    border-radius: 30px;
-    color: black;
-    padding: 10px;
-    margin: 10px;
-    background: linear-gradient(-45deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.25));
-    box-shadow: 
-    -8px -8px 25px 0 rgba(0, 0, 0, 0.3),
-    12px 12px 25px 0 rgba(255, 255, 255, 0.3);
-
-}
-#projects .box a:hover{
-    text-decoration: underline;
+    background: #000000;
+    padding: 60px 0;
 }
 
-.carousel{
-    height: auto;
-    width: 900px;
-    margin: 1.5rem;
-}
-.carousel a{
-    width: 50px;
-}
-.carousel-control-prev {
-    background-color: black;
-    margin-left: -50px;
-}
-.carousel-control-next {
-    background-color: black;
-    margin-right: -50px;
-}
-.carousel h5{
-    display: inline-block;
-    margin-top: 500px;
-    background: #1d1b1b;
+#work h1{
     color: white;
 }
-@media screen and (max-width: 1200px){
-    .carousel{
-      height: auto;
-      width: 500px;
-    }
+
+.container_foto {
+    background-color: rgb(14, 24, 85);
+    padding: 0;
+    overflow: hidden;
+    max-width: 480px;
+    margin: 8px;
 }
+
+.container_foto article {
+    padding: 10%;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    z-index: 1;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.container_foto h2 {
+    color: #fff;
+    font-weight: 800;
+    font-size: 25px;
+    border-bottom: #fff solid 1px;
+}
+
+.container_foto h4 {
+    font-weight: 300;
+    color: #fff;
+    font-size: 16px;
+}
+
+.container_foto img {
+    width: 100%;
+    top: 0;
+    left: 0;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.ver_mas {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0;
+    transform: translate(0px, 70px);
+    -webkit-transform: translate(0px, 70px);
+    -moz-transform: translate(0px, 70px);
+    -o-transform: translate(0px, 70px);
+    -ms-transform: translate(0px, 70px);
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.ver_mas a{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    position: relative;
+    width: 100%;
+}
+
+
+/*hovers*/
+
+.container_foto:hover {
+    cursor: pointer;
+    box-shadow: 
+    -3px -3px 3px 0 rgb(255, 255, 255),
+     3px 3px 3px 0 rgb(255, 255, 255);
+}
+
+.container_foto:hover img {
+    opacity: 0.1;
+    transform: scale(1.5);
+}
+
+.container_foto:hover article {
+    opacity: 1;
+    transform: translate(2px, -40px);
+    -webkit-transform: translate(2px, -40px);
+    -moz-transform: translate(2px, -40px);
+    -o-transform: translate(2px, -40px);
+    -ms-transform: translate(2px, -40px);
+}
+
+.container_foto:hover .ver_mas {
+    transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    opacity: 1;
+}
+
 
 /* Tools & Technologies */
 #tools{
@@ -259,15 +334,12 @@ canvas{
     flex-wrap: wrap;
 }
 #tools img{
-    background: linear-gradient(-45deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.25));
-    box-shadow: 
-    -8px -8px 25px 0 rgba(0, 0, 0, 0.3),
-    12px 12px 25px 0 rgba(255, 255, 255, 0.3);
     width: 200px;
     height: 200px;
     margin: 20px;
     transition: all 0.5s;
     border-radius: 20px;
+    
 }
 #tools img:hover{
     width: 230px;
@@ -278,27 +350,31 @@ canvas{
 /* About Section */
 #about{
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    padding: 70px 10px 10px 10px;
-    background-color: #ffffff;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 200 200'%3E%3Cpolygon fill='%23DCEFFA' points='100 0 0 100 100 100 100 200 200 100 200 0'/%3E%3C/svg%3E");
+    padding: 50px 100px 10px 100px;
+    background: #E5E5E5;
 }
-#about>h1{
-    margin: 10px;
-    border-radius: 20px;
-    background-color: rgb(8, 8, 65);
+@media screen and (max-width: 850px) {
+  #about{
+      flex-direction: column;
+  }
 }
-#about>div{
+#about .secondary{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+#about #content{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 0px;
-    width: 650px;
+    padding: 10px;
 }
 #about a{
+    width: 120px;
+    font-family: 'Vollkorn', serif;
     text-decoration: none;
+    text-align: center;
     color: white;
     padding: 10px;
     margin: 15px;
@@ -313,7 +389,6 @@ canvas{
 footer{
     display: flex;
     flex-direction: column;
-    align-items: center;
     height: 35vh;
     background: black;
     color: white;
@@ -323,14 +398,14 @@ footer{
     justify-content: space-between;
     width: 100%;
 }
-#contact{
-    text-align: left;
-}
 footer #details a{
     color: white;
 }
 footer #details a:hover{
     text-decoration: underline;
+}
+#contact{
+    text-align: left;
 }
 #social{
     display: flex;
@@ -345,9 +420,10 @@ svg{
 }
 #moveTop{
     color: white;
-    float: right;
+    width: 170px;
+    align-self: flex-end;
 }
 footer #copyright{
-   margin-top: 80px;
+   margin-top: 50px;
 }
 

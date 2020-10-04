@@ -1,46 +1,59 @@
 /* Class Utilities */
 .primary{
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 .secondary{
-    font-size: 1.2rem;
+    font-size: 0.8rem;
 }
 
 /* Home Section */
-#menu ul .primary{
-    font-size: 1rem;
+#menu img{
+    width: 30px;
 }
-#logo{
-    width: 80px;
-    transition: all 1s ease;
+#home #intro{
+    flex-direction: column;
+    justify-content: space-around;
 }
-#logo:hover{
-    transition: all 1s ease;
+#msg #logo{
+    margin: 15px;
+    width: 150px;
+}
+#msg #hi{
     width: 100px;
+    top: -50px;
+    right: -50px;
 }
 
 /* Projects Section */
-#projects .box{
-   width: 300px;
-   margin: 15px 5px;
+.row{
+    flex-direction: column;
 }
-.carousel,
-.carousel-item img{
-    width: 300px;
-    height: auto;
-  }
-.carousel a{
-    width: 30px;
-  }
-.carousel-control-prev {
-    background-color: black;
-    margin-left: -30px;
-    
+.container_foto {
+    max-width: 400px;
+    margin: 8px auto;
 }
-.carousel-control-next {
-    background-color: black;
-    margin-right: -30px;
+.container_foto h2{
+    font-size: 18px;
 }
+.container_foto h4{
+    font-size: 13px;
+}
+.ver_mas{
+    height: 32px;
+}
+.ver_mas a{
+    top: -5px;
+    font-size: 15px;
+}
+
+.container_foto:hover article {
+    transform: translate(2px, -10px);
+    -webkit-transform: translate(2px, -10px);
+    -moz-transform: translate(2px, -10px);
+    -o-transform: translate(2px, -10px);
+    -ms-transform: translate(2px, -10px);
+}
+
 
 /* Tools & Technologies */
 #tools img{
@@ -55,14 +68,23 @@
     transition: all 1s;
 }
 
-/* Resume Section */
-#about>div{
-    width: 320px;
+/* About Section */
+#about{
+    padding: 50px 10px 10px 10px;
+}
+#about img{
+    width: 20px;
+}
+#about #aboutimg{
+    width: 200px;
+}
+#about a{
+    align-self: center;
 }
 
 /* Footer Section */
 footer{
-    height: 41vh;
+    height: 45vh;
 }
 footer .secondary{
     font-size: 0.8rem;
