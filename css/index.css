@@ -84,7 +84,7 @@ canvas{
 }
 #home::after {
     content: "";
-    background: url('/img/back.jpg') no-repeat center/cover;
+    background: url('/img/homebg.jpg') no-repeat center/cover;
     background-attachment: fixed;
     width: 100vw;
     height: 100vh;
