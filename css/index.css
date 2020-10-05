@@ -214,7 +214,7 @@ canvas{
     padding: 60px 0;
 }
 
-#work h1{
+#work h1,h2,h4{
     color: white;
 }
 
@@ -223,7 +223,7 @@ canvas{
     padding: 0;
     overflow: hidden;
     max-width: 480px;
-    margin: 8px;
+    margin: 8px auto;
 }
 
 .container_foto article {
@@ -231,7 +231,7 @@ canvas{
     position: absolute;
     bottom: 0;
     opacity: 0;
-    z-index: 1;
+    /* z-index: 1; */
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -240,7 +240,6 @@ canvas{
 }
 
 .container_foto h2 {
-    color: #fff;
     font-weight: 800;
     font-size: 25px;
     border-bottom: #fff solid 1px;
@@ -248,7 +247,6 @@ canvas{
 
 .container_foto h4 {
     font-weight: 300;
-    color: #fff;
     font-size: 16px;
 }
 
@@ -266,6 +264,7 @@ canvas{
 .ver_mas {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     background-color: #ffffff;
     position: absolute;
     width: 100%;
@@ -288,12 +287,12 @@ canvas{
 .ver_mas a{
     font-size: 20px;
     color: rgb(0, 0, 0);
-    position: relative;
-    width: 100%;
+    height: 30px;
+    margin: 0;
 }
 
 
-/*hovers*/
+/*Project Hovers*/
 
 .container_foto:hover {
     cursor: pointer;
@@ -337,9 +336,9 @@ canvas{
     width: 200px;
     height: 200px;
     margin: 20px;
-    transition: all 0.5s;
     border-radius: 20px;
-    
+    transition: all 0.5s;
+    opacity: 0;
 }
 #tools img:hover{
     width: 230px;
@@ -355,7 +354,7 @@ canvas{
     padding: 50px 100px 10px 100px;
     background: #E5E5E5;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1030px) {
   #about{
       flex-direction: column;
   }
@@ -389,7 +388,7 @@ canvas{
 footer{
     display: flex;
     flex-direction: column;
-    height: 35vh;
+    height: 38vh;
     background: black;
     color: white;
 }
@@ -410,6 +409,7 @@ footer #details a:hover{
 #social{
     display: flex;
     flex-wrap: wrap;
+    padding: 6px;
 }
 #social a{
     margin: 0 8px;
@@ -417,6 +417,9 @@ footer #details a:hover{
 svg{
     display: inline;
     vertical-align: bottom;
+}
+g:hover{
+    fill: rgb(32, 25, 240);
 }
 #moveTop{
     color: white;

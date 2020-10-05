@@ -12,7 +12,7 @@
 }
 #home #intro{
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 #msg #logo{
     margin: 15px;
@@ -30,10 +30,9 @@
 }
 .container_foto {
     max-width: 400px;
-    margin: 8px auto;
 }
 .container_foto h2{
-    font-size: 18px;
+    font-size: 16px;
 }
 .container_foto h4{
     font-size: 13px;
@@ -42,7 +41,6 @@
     height: 32px;
 }
 .ver_mas a{
-    top: -5px;
     font-size: 15px;
 }
 
@@ -63,8 +61,8 @@
     transition: all 1s;
 }
 #tools img:hover{
-    width: 100px;
-    height: 100px;
+    width: 105px;
+    height: 105px;
     transition: all 1s;
 }
 
@@ -72,10 +70,10 @@
 #about{
     padding: 50px 10px 10px 10px;
 }
-#about img{
+#about #content img{
     width: 20px;
 }
-#about #aboutimg{
+#about #about-img{
     width: 200px;
 }
 #about a{
@@ -84,7 +82,7 @@
 
 /* Footer Section */
 footer{
-    height: 45vh;
+    height: 42vh;
 }
 footer .secondary{
     font-size: 0.8rem;

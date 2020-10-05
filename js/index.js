@@ -1,4 +1,4 @@
-// Sticky Navbar
+// STICKY NAVBAR
 
 // When the user scrolls the page, execute myFunction
 window.onscroll = function () { myFunction() };
@@ -18,41 +18,62 @@ function myFunction() {
   }
 }
 
-// Animate.css
+// ANIMATE.CSS
+
 $(document).ready(function () {
   $(window).scroll(function () {
-    oTop = $("#work").offset().top - window.innerHeight;
+    oTop = $("#proj1").offset().top - window.innerHeight;
     if ($(window).scrollTop() > oTop) {
-      $('#work').addClass('animate__animated animate__fadeInRight');
+      $('#proj1').addClass('animate__animated animate__fadeInUp');
+    }
+    oTop = $("#proj2").offset().top - window.innerHeight;
+    if ($(window).scrollTop() > oTop) {
+      $('#proj2').addClass('animate__animated animate__fadeInUp');
+    }
+    oTop = $("#proj3").offset().top - window.innerHeight;
+    if ($(window).scrollTop() > oTop) {
+      $('#proj3').addClass('animate__animated animate__fadeInUp');
+    }
+    oTop = $("#proj4").offset().top - window.innerHeight;
+    if ($(window).scrollTop() > oTop) {
+      $('#proj4').addClass('animate__animated animate__fadeInUp');
+    }
+    oTop = $("#tools").offset().top - window.innerHeight;
+    if ($(window).scrollTop() > oTop) {
+      $('.img-thumbnail').addClass('animate__animated animate__fadeInUp');
     }
     oTop = $("#about").offset().top - window.innerHeight;
     if ($(window).scrollTop() > oTop) {
-      $('#about').addClass('animate__animated animate__fadeInLeft');
+      $('#about').addClass('animate__animated animate__zoomIn');
     }
   });
 });
 
-// GSAP Animations
+// GSAP ANIMATIONS
+
+// Name
 gsap.from(".word", { duration: 0.5, y: -300, opacity: 0, stagger: 0.1 });
 
+// Logo
 TweenLite.set("#logo", { x:-400, y:-200});
 var tl = new TimelineLite();
   tl.to("#logo", 0.5, { y:-250})
     .to("#logo", 1.25, { y:0, ease:Bounce.easeOut})
     .to("#logo", 2.5, {x:"+=400"}, "-=1.75")
 
-// Message
-tl.to("#hi", {duration: 1.5, opacity: 1, ease: "bounce"});
+// Hi Message
+document.getElementById('logo').addEventListener('click',function() {
+  TweenMax.fromTo('#hi', 1, {opacity: 0}, {opacity: 1, repeatDelay: 0.5, repeat: 1, yoyo: true});
+})
 
-
-// About Img Animation
+// AboutImg Animation
 function specialEffect(){
-  animateCSS('#aboutimg', 'heartBeat');
+  animateCSS('#about-img', 'heartBeat');
 }
 
 const animateCSS = (element, animation, prefix = 'animate__') =>
   // We create a Promise and return it
-  new Promise((resolve, reject) => {
+  new Promise((resolve) => {
     const animationName = `${prefix}${animation}`;
     const node = document.querySelector(element);
 
@@ -66,3 +87,4 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
 
     node.addEventListener('animationend', handleAnimationEnd, {once: true});
   });
+
