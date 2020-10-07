@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@1,600&display=swap');
+
 /* CSS Reset */
 *{
     margin: 0;
@@ -84,7 +85,7 @@ canvas{
 }
 #home::after {
     content: "";
-    background: url('/img/homebg.jpg') no-repeat center/cover;
+    background: url('/img/homebg.jpg') no-repeat center center/cover;
     background-attachment: fixed;
     width: 100vw;
     height: 100vh;
@@ -93,7 +94,7 @@ canvas{
     top: 0;
     left: 0;
     z-index: -1;   
-  }
+}
 #intro p{
     text-align: left;
     padding: 0;
@@ -116,6 +117,7 @@ canvas{
     height: auto;
     margin: 0 30px;
     border-radius: 50%;
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.5));
 }
 @media screen and (max-width: 1050px){
     #home #intro{
@@ -351,12 +353,15 @@ canvas{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 100px 10px 100px;
+    padding: 50px 100px 0 100px;
     background: #E5E5E5;
 }
 @media screen and (max-width: 1030px) {
   #about{
       flex-direction: column;
+  }
+  #about-img{
+      width: 350px;
   }
 }
 #about .secondary{
@@ -384,6 +389,20 @@ canvas{
     text-decoration: underline;
 }
 
+svg #face{
+    animation: face 1s ease-in-out infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+  }
+  
+  @keyframes face{
+    0%{
+      transform: rotateZ(-5deg);
+    }
+    100%{
+      transform: rotateZ(5deg);
+    }
+  }
 /* Footer Section */
 footer{
     display: flex;
@@ -414,11 +433,11 @@ footer #details a:hover{
 #social a{
     margin: 0 8px;
 }
-svg{
+footer svg{
     display: inline;
     vertical-align: bottom;
 }
-g:hover{
+footer g:hover{
     fill: rgb(32, 25, 240);
 }
 #moveTop{

@@ -16,7 +16,7 @@
 }
 #msg #logo{
     margin: 15px;
-    width: 150px;
+    width: 160px;
 }
 #msg #hi{
     width: 100px;
@@ -68,13 +68,13 @@
 
 /* About Section */
 #about{
-    padding: 50px 10px 10px 10px;
+    padding: 50px 10px 0 10px;
 }
 #about #content img{
     width: 20px;
 }
 #about #about-img{
-    width: 200px;
+    width: 180px;
 }
 #about a{
     align-self: center;

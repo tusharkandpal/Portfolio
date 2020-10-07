@@ -68,7 +68,7 @@ document.getElementById('logo').addEventListener('click',function() {
 
 // AboutImg Animation
 function specialEffect(){
-  animateCSS('#about-img', 'heartBeat');
+  animateCSS('#about-img', 'bounceInRight');
 }
 
 const animateCSS = (element, animation, prefix = 'animate__') =>
