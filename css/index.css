@@ -117,6 +117,7 @@ canvas{
     height: auto;
     margin: 0 30px;
     border-radius: 50%;
+    cursor: pointer;
     filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.5));
 }
 @media screen and (max-width: 1050px){
@@ -388,7 +389,9 @@ canvas{
 #about a:hover{
     text-decoration: underline;
 }
-
+#about svg{
+    cursor: pointer;
+}
 svg #face{
     animation: face 1s ease-in-out infinite alternate;
     transform-origin: bottom;
