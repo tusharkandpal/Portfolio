@@ -5,16 +5,16 @@
 This is my personal portfolio where I implemented & explored all the skills I've learnt (& still learning) after starting my Front-End journey.
 
 ***
-![first img](./img/Demo.gif)
-### <p style="text-align: center;"><a href="https://tusharkandpal.github.io">**Live Demo**</a><p>
+![demo](./img/Demo.gif)
+### <p style="text-align: center"><a href="https://tusharkandpal.github.io">**Live Demo**</a><p>
 ***
 
 ## **Screenshots**
-![first img](/img/p1.jpg)
+![first img](./img/p1.jpg)
 
-![second img](/img/p2.jpg)
+![second img](./img/p2.jpg)
 
-![third img](/img/p3.jpg)
+![third img](./img/p3.jpg)
 ***
 
 ## **Built Using**
