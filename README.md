@@ -10,11 +10,11 @@ This is my personal portfolio where I implemented & explored all the skills I've
 ***
 
 ## **Screenshots**
-![first img](./img/p1.jpg)
+![first img](./img/p1.JPG)
 
-![second img](./img/p2.jpg)
+![second img](./img/p2.JPG)
 
-![third img](./img/p3.jpg)
+![third img](./img/p3.JPG)
 ***
 
 ## **Built Using**
