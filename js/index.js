@@ -1,3 +1,15 @@
+// Loader
+let myVar;
+
+function mySite() {
+  myVar = setTimeout(showPage, 3000);
+}
+  
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myPortfolio").style.display = "block";
+}
+  
 // STICKY NAVBAR
 
 // When the user scrolls the page, execute myFunction
@@ -38,6 +50,14 @@ $(document).ready(function () {
     if ($(window).scrollTop() > oTop) {
       $('#proj4').addClass('animate__animated animate__fadeInUp');
     }
+    oTop = $("#proj5").offset().top - window.innerHeight;
+    if ($(window).scrollTop() > oTop) {
+      $('#proj5').addClass('animate__animated animate__fadeInUp');
+    }
+    oTop = $("#proj6").offset().top - window.innerHeight;
+    if ($(window).scrollTop() > oTop) {
+      $('#proj6').addClass('animate__animated animate__fadeInUp');
+    }
     oTop = $("#tools").offset().top - window.innerHeight;
     if ($(window).scrollTop() > oTop) {
       $('.img-thumbnail').addClass('animate__animated animate__fadeInUp');
@@ -55,16 +75,16 @@ $(document).ready(function () {
 gsap.from(".word", { duration: 0.5, y: -300, opacity: 0, stagger: 0.1 });
 
 // Logo
-TweenLite.set("#logo", { x:-400, y:-200});
-var tl = new TimelineLite();
-  tl.to("#logo", 0.5, { y:-250})
-    .to("#logo", 1.25, { y:0, ease:Bounce.easeOut})
-    .to("#logo", 2.5, {x:"+=400"}, "-=1.75")
+
 
 // Hi Message
+let sound = new Audio('img/Sound Effect 12.wav');
+
 document.getElementById('logo').addEventListener('click',function() {
-  TweenMax.fromTo('#hi', 1, {opacity: 0}, {opacity: 1, repeatDelay: 0.5, repeat: 1, yoyo: true});
-})
+  // TweenMax.fromTo('#hi', 1, {opacity: 0}, {opacity: 1, repeatDelay: 0.5, repeat: 1, yoyo: true});
+  gsap.to("#logo", {transformOrigin:"origin", rotation: 5});
+  sound.play();
+}, {once: true})
 
 // AboutImg Animation
 function specialEffect(){
@@ -87,4 +107,3 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
 
     node.addEventListener('animationend', handleAnimationEnd, {once: true});
   });
-

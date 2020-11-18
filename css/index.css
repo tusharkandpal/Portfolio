@@ -12,10 +12,42 @@ html,body{
     overflow-x: hidden !important;
 }
 
+/* Loader */
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #2019f0;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+#myPortfolio {
+    display: none;
+  }  
+
+
 /* Class & Element Utilities */
 .primary{
     font-family: 'Alegreya', serif;
-    color: rgb(27, 33, 66);
+    color: #1b2142;
     font-size: 1.5rem;
     margin: 10px;
 }
@@ -72,7 +104,7 @@ canvas{
     margin: 0px;
 }
 #menu a:hover{
-    color: rgb(32, 25, 240);
+    color: #2019f0;
 }
 
 /* Home Page > Intro */
@@ -110,15 +142,14 @@ canvas{
 }
 #msg{
     position: relative;
-    z-index: 1;
 }
 #logo{
-    width: 200px;
+    width: 250px;
     height: auto;
     margin: 0 30px;
-    border-radius: 50%;
     cursor: pointer;
     filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.5));
+    transform: rotate(-15deg);
 }
 @media screen and (max-width: 1050px){
     #home #intro{
@@ -305,7 +336,7 @@ canvas{
 }
 
 .container_foto:hover img {
-    opacity: 0.1;
+    opacity: 0;
     transform: scale(1.5);
 }
 

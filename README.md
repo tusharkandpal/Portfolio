@@ -6,7 +6,7 @@ This is my personal portfolio where I implemented & explored all the skills I've
 
 ***
 ![demo](./img/Demo.gif)
-### <p style="text-align: center"><a href="https://tusharkandpal.github.io">**Live Demo**</a><p>
+### <div align="center"><a href="https://tusharkandpal.github.io">**Live Demo**</a></div>
 ***
 
 ## **Screenshots**
@@ -32,7 +32,6 @@ This is my personal portfolio where I implemented & explored all the skills I've
 
 ## **Features**
 - Responsive
-- Hosted via Github
 ***
 
 ## **Reach Me**

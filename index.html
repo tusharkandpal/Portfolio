@@ -15,7 +15,11 @@
     <link rel="stylesheet" media="screen and (max-width: 770px)" href="css/app.css">
 </head>
 
-<body>
+<body onload="mySite()">
+    <div id="loader"></div>
+
+    <div id="myPortfolio">
+
     <!-- Home Section -->
     <section id="home">
         <!-- Menu -->
@@ -75,7 +79,7 @@
                 </div>
             </div>
             <div id="msg">
-                <img id="logo" src="img/logo.jpg" alt="profile-pic">
+                <img id="logo" src="img/logo.png" alt="profile-pic">
                 <img id="hi" src="img/hi.png" width="150px">
             </div>
 
@@ -115,10 +119,12 @@
                         <div class="ver_mas text-center">
                             <a class="primary" href="https://github.com/tusharkandpal/Expense-Tracker-XCalci"
                                 target="_blank">Github</a>
+                                <a class="primary" href="https://tusharkandpal.github.io/Expense-Tracker-XCalci/"
+                                target="_blank">View</a>
                         </div>
                         <article class="text-left">
                             <h2>EXPENSE TRACKER</h2>
-                            <h4>It keeps track of all the expenses along with their description & sums it up. It is
+                            <h4>It displays all the expenses along with their description & sums it up. It is
                                 built using HTML,
                                 CSS (Bootstrap) & JavaScript.</h4>
                         </article>
@@ -128,7 +134,7 @@
                         <div class="ver_mas text-center">
                             <a class="primary" href="https://github.com/tusharkandpal/Devs-WellSource"
                                 target="_blank">Github</a>
-                            <a class="primary" href="https://tusharkandpal.github.io/Devs-WellSource.github.io"
+                            <a class="primary" href="https://tusharkandpal.github.io/Devs-WellSource"
                                 target="_blank">View</a>
                         </div>
                         <article class="text-left">
@@ -139,6 +145,30 @@
                                 CSS (Bootstrap) & JavaScript.</h4>
                         </article>
                         <img src="img/project4.JPG" alt="">
+                    </div>
+                    <div id="proj5" class="col-4 container_foto">
+                        <div class="ver_mas text-center">
+                            <a class="primary" href="https://github.com/tusharkandpal/Twider"
+                                target="_blank">Github</a>
+                                <a class="primary" href="https://tusharkandpal.github.io/Twider/"
+                                target="_blank">View</a>
+                        </div>
+                        <article class="text-left">
+                            <h2>TWIDER</h2>
+                            <h4>Tweets reader responsive webpage template. Built using HTML5, CSS3.</h4>
+                        </article>
+                        <img src="img/project5.JPG" alt="">
+                    </div>
+                    <div id="proj6" class="col-4 container_foto">
+                        <div class="ver_mas text-center">
+                            <a class="primary" href="https://github.com/tusharkandpal/Meme-Generator"
+                                target="_blank">Github</a>
+                        </div>
+                        <article class="text-left">
+                            <h2>MEME GENERATOR</h2>
+                            <h4>Generate memes anytime, anywhere. Built using HTML5, CSS3, ReactJS.</h4>
+                        </article>
+                        <img src="img/project6.JPG" alt="">
                     </div>
                 </div>
             </div>
@@ -367,6 +397,7 @@
             <p class="secondary">© 2020 <a href="https://twitter.com/tushar_kandpal" target="_blank"><span style="color:rgb(32, 25, 240)">Tushar Kandpal</span></a>. Made with ❤</p>
         </div>
     </footer>
+</div>
 
     <!-- Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
