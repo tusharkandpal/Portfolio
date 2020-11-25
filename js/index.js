@@ -2,32 +2,12 @@
 let myVar;
 
 function mySite() {
-  myVar = setTimeout(showPage, 3000);
+  myVar = setTimeout(showPage, 2500);
 }
   
 function showPage() {
   document.getElementById("loader").style.display = "none";
   document.getElementById("myPortfolio").style.display = "block";
-}
-  
-// STICKY NAVBAR
-
-// When the user scrolls the page, execute myFunction
-window.onscroll = function () { myFunction() };
-
-// Get the navbar
-var navbar = document.getElementById("menu");
-
-// Get the offset position of the navbar
-var sticky = navbar.offsetTop;
-
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
 }
 
 // ANIMATE.CSS
@@ -69,31 +49,18 @@ $(document).ready(function () {
   });
 });
 
-// GSAP ANIMATIONS
-
+// GSAP ANIMATION
 // Name
-gsap.from(".word", { duration: 0.5, y: -300, opacity: 0, stagger: 0.1 });
-
-// Logo
-
-
-// Hi Message
-let sound = new Audio('img/Sound Effect 12.wav');
-
-document.getElementById('logo').addEventListener('click',function() {
-  // TweenMax.fromTo('#hi', 1, {opacity: 0}, {opacity: 1, repeatDelay: 0.5, repeat: 1, yoyo: true});
-  gsap.to("#logo", {transformOrigin:"origin", rotation: 5});
-  sound.play();
-}, {once: true})
+gsap.from(".word", { duration: 1.5, y: -30, opacity: 0, stagger: 0.1 });
 
 // AboutImg Animation
 function specialEffect(){
-  animateCSS('#about-img', 'bounceInRight');
+  animateCSS('#intro-img', 'bounceInRight');
 }
 
 const animateCSS = (element, animation, prefix = 'animate__') =>
   // We create a Promise and return it
-  new Promise((resolve) => {
+  new Promise((resolve, reject) => {
     const animationName = `${prefix}${animation}`;
     const node = document.querySelector(element);
 
@@ -107,3 +74,29 @@ const animateCSS = (element, animation, prefix = 'animate__') =>
 
     node.addEventListener('animationend', handleAnimationEnd, {once: true});
   });
+
+
+// Fetch Dev.to API
+
+function getData() {
+fetch('https://dev.to/api/articles?username=tushar_kandpal')
+.then((res) => res.json())
+.then((data) => {
+  let output = ``;
+  // console.log(data);
+  data.map(( item ) => {
+    output += `
+    <div class="post">
+    <h5>${item.title}</h5>
+    <p>${item.description}</p>
+    <a href="${item.url}" target="_blank">Read More</a>
+    </div>
+  `;
+  });
+  document.getElementById('output').innerHTML = output;
+})
+
+}
+
+// Call to fetch
+getData();

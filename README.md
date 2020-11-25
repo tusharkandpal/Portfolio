@@ -15,11 +15,13 @@ This is my personal portfolio where I implemented & explored all the skills I've
 ![second img](./img/p2.JPG)
 
 ![third img](./img/p3.JPG)
+
+![fourth img](./img/p4.JPG)
 ***
 
 ## **Built Using**
 
-- HTML5, CSS3, JS
+- HTML5, CSS3, JS, Fetch API
 - **Frameworks:** Bootstrap 4
 - **Libraries:** 
   * Animate.css
