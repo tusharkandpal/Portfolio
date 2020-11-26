@@ -51,7 +51,7 @@ $(document).ready(function () {
 
 // GSAP ANIMATION
 // Name
-gsap.from(".word", { duration: 1.5, y: -30, opacity: 0, stagger: 0.1 });
+gsap.from(".word", { duration: 1.5, y: -30, opacity: 0, stagger: 0.1, delay: 2.5 });
 
 // AboutImg Animation
 function specialEffect(){
@@ -89,7 +89,7 @@ fetch('https://dev.to/api/articles?username=tushar_kandpal')
     <div class="post">
     <h5>${item.title}</h5>
     <p>${item.description}</p>
-    <a href="${item.url}" target="_blank">Read More</a>
+    <a class="secondary" href="${item.url}" target="_blank">Read More</a>
     </div>
   `;
   });

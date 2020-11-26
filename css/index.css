@@ -124,11 +124,12 @@ svg #face{
     align-items: center;
     width: 100%;
     padding: 65px 0 20px 0;
+    background-color: var(--primary-color);
 }
 
 #work h1{
-    color: var(--primary-color);
-    border-bottom: 4px solid var(--primary-color);
+    color: var(--tertiary-color);
+    border-bottom: 4px solid var(--tertiary-color);
 }
  
 #work h2, #work h4{
@@ -143,7 +144,6 @@ svg #face{
     overflow: hidden;
     max-width: 480px;
     margin: 8px auto;
-    border: 3px solid;
 }
 
 .container_foto article {
@@ -215,7 +215,7 @@ svg #face{
 
 .container_foto:hover {
     cursor: pointer;
-    box-shadow: 0 0 5px 5px var(--primary-color);
+    box-shadow: 0 0 5px 5px var(--tertiary-color);
 }
 
 .container_foto:hover img {
@@ -348,7 +348,7 @@ svg #face{
 }
 #output .post a{
     text-decoration: none;
-    padding: 8px;
+    padding: 10px;
     border-radius: 10px;
     transition: all 0.5s;
 }
