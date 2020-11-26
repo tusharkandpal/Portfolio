@@ -57,17 +57,12 @@
 #skills, #education{
     flex-direction: column;
 }
-#info{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 /* Blog Section */
 #output{
     flex-direction: column;
 }
-#output .article{
+#output .post{
     width: 310px;
 }
 
