@@ -50,7 +50,7 @@ html,body{
 }
 #myPortfolio {
     display: none;
-  }  
+}  
 
 /* Home Page */
 
@@ -123,8 +123,9 @@ svg #face{
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 65px 0 20px 0;
+    padding: 20px 0;
     background-color: var(--primary-color);
+    scroll-margin-top: 45px;
 }
 
 #work h1{
@@ -273,11 +274,11 @@ svg #face{
     justify-content: center;
     align-items: center;
     background-color: var(--tertiary-color);
-    padding: 55px 0 20px 0;
+    padding: 20px 0;
+    scroll-margin-top: 45px;
 }
 #about h1{
     color: var(--primary-color);
-    margin: 15px 0;
     border-bottom: 4px solid var(--primary-color);
 }
 #about h4{

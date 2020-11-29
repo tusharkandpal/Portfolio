@@ -10,6 +10,21 @@ function showPage() {
   document.getElementById("myPortfolio").style.display = "block";
 }
 
+// Active link in Menu
+$(".nav-item").click(function() { 
+              
+  // Select all list items 
+  var listItems = $(".nav-item"); 
+    
+  // Remove 'active' tag for all list items 
+  for (let i = 0; i < listItems.length; i++) { 
+      listItems[i].classList.remove("active"); 
+  } 
+    
+  // Add 'active' tag for currently selected item 
+  this.classList.add("active"); 
+}); 
+
 // ANIMATE.CSS
 
 $(document).ready(function () {
